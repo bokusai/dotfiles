@@ -1,3 +1,13 @@
+" ------------------------------------------------------------------------
+"          _
+"   __   _(_)_ __ ___  _ __ ___
+"   \ \ / / | '_ ` _ \| '__/ __|
+"    \ V /| | | | | | | | | (__
+"     \_/ |_|_| |_| |_|_|  \___|
+"
+" ------------------------------------------------------------------------ 
+
+
 " Character Code
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
@@ -25,7 +35,7 @@ set noautoindent
 
 " Invisible Character Visible
 set list
-set listchars=tab:^.
+set listchars=tab:\|\_
 autocmd VimEnter,Colorscheme * highlight SpecialKey cterm=NONE ctermfg=darkgray ctermbg=NONE
 
 
@@ -54,25 +64,25 @@ nnoremap $ $<Right>
 
 inoremap jj <Esc>
 " inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
+" inoremap {<Enter> {}<Left><CR><ESC><S-o>
 " inoremap ( ()
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
-inoremap $ $<Right>
-inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><TAB>
+" inoremap (<Enter> ()<Left><CR><ESC><S-o>
+" inoremap $ $<Right>
+" inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><TAB>
 
 
 " Tab Control
-nnoremap sl gt
-nnoremap sh gT
-nnoremap sn1 :tabn1<Enter>
-nnoremap sn2 :tabn2<Enter>
-nnoremap sn3 :tabn3<Enter>
-nnoremap sn4 :tabn4<Enter>
-nnoremap sn5 :tabn5<Enter>
-nnoremap sn6 :tabn6<Enter>
-nnoremap sn7 :tabn7<Enter>
-nnoremap sn8 :tabn8<Enter>
-nnoremap sn9 :tabn9<Enter>
+" nnoremap sl gt
+" nnoremap sh gT
+" nnoremap sn1 :tabn1<Enter>
+" nnoremap sn2 :tabn2<Enter>
+" nnoremap sn3 :tabn3<Enter>
+" nnoremap sn4 :tabn4<Enter>
+" nnoremap sn5 :tabn5<Enter>
+" nnoremap sn6 :tabn6<Enter>
+" nnoremap sn7 :tabn7<Enter>
+" nnoremap sn8 :tabn8<Enter>
+" nnoremap sn9 :tabn9<Enter>
 
 " Vundle Basic Setting
 set nocompatible
@@ -82,10 +92,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins URL
-Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの階層構造
-Plugin 'https://github.com/scrooloose/nerdcommenter'			" コメントアウトの簡易化
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
-Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
+" Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの階層構造
+" Plugin 'https://github.com/scrooloose/nerdcommenter'			" コメントアウトの簡易化
+" Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
+" Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
 Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
 Plugin 'https://github.com/pangloss/vim-javascript'				" JavaScript Syntax
@@ -105,17 +115,23 @@ filetype plugin indent on
 " ------------------------------------------
 " Plugins Setting
 " ------------------------------------------
+
 " NERDTree Setting
-nnoremap <C-e> :NERDTreeToggle<CR>
+" nnoremap <C-e> :NERDTreeToggle<CR>
+
 " NERDCommenter Setting
-filetype on
-let g:NERDSpaceDelims=1
+" filetype on
+" let g:NERDSpaceDelims=1
+
 " CtrlP Setting
-let g:ctrlp_match_window = 'max:30'
+" let g:ctrlp_match_window = 'max:30'
+
 " vim-airline
 let g:airline_theme = 'luna'
+
 " ctrlP
-set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png
+" set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png
+
 " ColorScheme Setting
 " syntax on
 colorscheme tender
