@@ -25,7 +25,7 @@ set noautoindent
 
 " Invisible Character Visible
 set list
-set listchars=tab:^.
+set listchars=tab:\|\_
 autocmd VimEnter,Colorscheme * highlight SpecialKey cterm=NONE ctermfg=darkgray ctermbg=NONE
 
 
