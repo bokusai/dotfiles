@@ -84,6 +84,17 @@ inoremap jj <Esc>
 " nnoremap sn8 :tabn8<Enter>
 " nnoremap sn9 :tabn9<Enter>
 
+" vertical "f"
+command -nargs=1 MyLineSearch let @m=<q-args> | call search('^\s*'. @m)
+command -nargs=1 MyLineBackSearch let @m=<q-args> | call search('^\s*'. @m, 'b')
+nnoremap <Space>f :MyLineSearch<Space>
+nnoremap <Space>F :MyLineBackSearch<Space>
+
+command MyLineSameSearch call search('^\s*'. @m)
+command MyLineBackSameSearch call search('^\s*'. @m, 'b')
+nnoremap <Space>; :MyLineSameSearch<CR>
+nnoremap <Space>, :MyLineBackSameSearch<CR>
+
 " Vundle Basic Setting
 set nocompatible
 filetype off
