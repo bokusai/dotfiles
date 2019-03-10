@@ -144,7 +144,7 @@ let g:airline_theme = 'luna'
 " set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png
 
 " ColorScheme Setting
-" syntax on
+syntax on
 colorscheme tender
 
 " MyCustom ColorScheme
