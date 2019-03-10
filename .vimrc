@@ -97,7 +97,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
 " Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
-Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
+" Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
 Plugin 'https://github.com/pangloss/vim-javascript'				" JavaScript Syntax
 Plugin 'https://github.com/StanAngeloff/php.vim'				" PHP Syntax
 " Views Plugins
