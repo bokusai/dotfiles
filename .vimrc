@@ -63,28 +63,21 @@ noremap! <C-?> <C-h>
 nnoremap $ $<Right>
 
 inoremap jj <Esc>
-" inoremap { {}<Left>
-" inoremap {<Enter> {}<Left><CR><ESC><S-o>
-" inoremap ( ()
-" inoremap (<Enter> ()<Left><CR><ESC><S-o>
-" inoremap $ $<Right>
-" inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><TAB>
-
 
 " Tab Control
-" nnoremap sl gt
-" nnoremap sh gT
-" nnoremap sn1 :tabn1<Enter>
-" nnoremap sn2 :tabn2<Enter>
-" nnoremap sn3 :tabn3<Enter>
-" nnoremap sn4 :tabn4<Enter>
-" nnoremap sn5 :tabn5<Enter>
-" nnoremap sn6 :tabn6<Enter>
-" nnoremap sn7 :tabn7<Enter>
-" nnoremap sn8 :tabn8<Enter>
-" nnoremap sn9 :tabn9<Enter>
+nnoremap sl gt
+nnoremap sh gT
+nnoremap sn1 :tabn1<Enter>
+nnoremap sn2 :tabn2<Enter>
+nnoremap sn3 :tabn3<Enter>
+nnoremap sn4 :tabn4<Enter>
+nnoremap sn5 :tabn5<Enter>
+nnoremap sn6 :tabn6<Enter>
+nnoremap sn7 :tabn7<Enter>
+nnoremap sn8 :tabn8<Enter>
+nnoremap sn9 :tabn9<Enter>
 
-" vertical "f"
+" vertical 'f'
 command -nargs=1 MyLineSearch let @m=<q-args> | call search('^\s*'. @m)
 command -nargs=1 MyLineBackSearch let @m=<q-args> | call search('^\s*'. @m, 'b')
 nnoremap <Space>f :MyLineSearch<Space>
@@ -103,9 +96,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins URL
-" Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの階層構造
+Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの階層構造
+Plugin 'https://github.com/jistr/vim-nerdtree-tabs'				" nerdtreeのtabごとの同期
 " Plugin 'https://github.com/scrooloose/nerdcommenter'			" コメントアウトの簡易化
-" Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
 " Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
 " Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
@@ -129,19 +123,25 @@ filetype plugin indent on
 
 " NERDTree Setting
 " nnoremap <C-e> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+let g:NERDTreeShowBookmarks = 1
+
+" NERDTree Tabs
+map <C-n> <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
 
 " NERDCommenter Setting
 " filetype on
 " let g:NERDSpaceDelims=1
 
 " CtrlP Setting
-" let g:ctrlp_match_window = 'max:30'
+let g:ctrlp_match_window = 'max:30'
 
 " vim-airline
 let g:airline_theme = 'luna'
 
 " ctrlP
-" set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png
+set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png,*/cakephp/lib/*
 
 " ColorScheme Setting
 syntax on
