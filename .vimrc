@@ -65,17 +65,17 @@ nnoremap $ $<Right>
 inoremap jj <Esc>
 
 " Tab Control
-nnoremap sl gt
-nnoremap sh gT
-nnoremap sn1 :tabn1<Enter>
-nnoremap sn2 :tabn2<Enter>
-nnoremap sn3 :tabn3<Enter>
-nnoremap sn4 :tabn4<Enter>
-nnoremap sn5 :tabn5<Enter>
-nnoremap sn6 :tabn6<Enter>
-nnoremap sn7 :tabn7<Enter>
-nnoremap sn8 :tabn8<Enter>
-nnoremap sn9 :tabn9<Enter>
+nnoremap tl gt
+nnoremap th gT
+nnoremap tn1 :tabn1<Enter>
+nnoremap tn2 :tabn2<Enter>
+nnoremap tn3 :tabn3<Enter>
+nnoremap tn4 :tabn4<Enter>
+nnoremap tn5 :tabn5<Enter>
+nnoremap tn6 :tabn6<Enter>
+nnoremap tn7 :tabn7<Enter>
+nnoremap tn8 :tabn8<Enter>
+nnoremap tn9 :tabn9<Enter>
 
 " vertical 'f'
 command -nargs=1 MyLineSearch let @m=<q-args> | call search('^\s*'. @m)
@@ -122,7 +122,7 @@ filetype plugin indent on
 " ------------------------------------------
 
 " NERDTree Setting
-" nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 let g:NERDTreeShowBookmarks = 1
 
