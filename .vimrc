@@ -16,6 +16,7 @@ set fenc=utf-8
 scriptencoding utf-8
 
 set nobackup
+set noswapfile
 set autoread
 set hidden
 set showcmd
@@ -28,10 +29,13 @@ set ruler
 set scrolloff=5
 set t_Co=256
 
-set showmatch
-set tabstop=4
+set autoindent
 set smartindent
-set noautoindent
+set shiftwidth=4
+set noexpandtab
+
+set tabstop=4
+set showmatch
 
 " Invisible Character Visible
 set list
@@ -65,17 +69,22 @@ nnoremap $ $<Right>
 inoremap jj <Esc>
 
 " Tab Control
-nnoremap tl gt
-nnoremap th gT
-nnoremap tn1 :tabn1<Enter>
-nnoremap tn2 :tabn2<Enter>
-nnoremap tn3 :tabn3<Enter>
-nnoremap tn4 :tabn4<Enter>
-nnoremap tn5 :tabn5<Enter>
-nnoremap tn6 :tabn6<Enter>
-nnoremap tn7 :tabn7<Enter>
-nnoremap tn8 :tabn8<Enter>
-nnoremap tn9 :tabn9<Enter>
+nnoremap sl gt
+nnoremap sh gT
+nnoremap sn1 :tabn1<Enter>
+nnoremap sn2 :tabn2<Enter>
+nnoremap sn3 :tabn3<Enter>
+nnoremap sn4 :tabn4<Enter>
+nnoremap sn5 :tabn5<Enter>
+nnoremap sn6 :tabn6<Enter>
+nnoremap sn7 :tabn7<Enter>
+nnoremap sn8 :tabn8<Enter>
+nnoremap sn9 :tabn9<Enter>
+
+" brackets 
+inoremap {<Enter> {<Enter>}<Esc>O
+inoremap (<Enter> (<Enter>)<Esc>O
+inoremap [<Enter> [<Enter>]<Esc>O
 
 " vertical 'f'
 command -nargs=1 MyLineSearch let @m=<q-args> | call search('^\s*'. @m)
@@ -89,9 +98,18 @@ nnoremap <Space>; :MyLineSameSearch<CR>
 nnoremap <Space>, :MyLineBackSameSearch<CR>
 
 " Vundle Basic Setting
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+if has('vim_starting')
+	set nocompatible
+	filetype off
+
+	if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+		echo 'install Vundle.vim...'
+		call system('mkdir -p ~/.vim/bundle/')
+		call system('git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim')
+	endif
+
+	set rtp+=~/.vim/bundle/Vundle.vim
+endif
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
