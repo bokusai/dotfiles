@@ -9,3 +9,11 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+alias glog='git log'
+alias glogp='git log -p'
+alias ga='git add .'
+alias gc='git commit -m '
+alias gs='git status'
+alias gd='git diff'
+alias gaddw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero;git checkout .'
+alias ggraph='git log --oneline --graph --all'
