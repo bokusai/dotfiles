@@ -1,0 +1,12 @@
+[user]
+	name = tungsten
+	email = tungsten99ie@gmail.com
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[push]
+	default = current
