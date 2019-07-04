@@ -147,7 +147,7 @@ let g:NERDTreeShowBookmarks = 1
 
 " CtrlP Setting
 let g:ctrlp_match_window = 'max:30'
-let g:ctrlp_map = '<Space>p'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png,*/cakephp/lib/*
 let g:ctrlp_show_hidden = 1
