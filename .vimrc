@@ -36,6 +36,7 @@ set noexpandtab
 
 set tabstop=4
 set showmatch
+set backspace=2
 
 " Invisible Character Visible
 set list
