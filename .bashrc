@@ -11,14 +11,14 @@ fi
 # User specific aliases and functions
 
 # linux 
-alias l='ls -l'
-alias la='ls -la'
-alias ls='ls -ls'
-alias lsa='ls -lsa'
+alias l='ls -l --color'
+alias la='ls -la --color'
+alias ls='ls -ls --color'
+alias lsa='ls -lsa --color'
 
 # git
-alias glog='git log'
-alias glogp='git log -p'
+alias gl='git log'
+alias glp='git log -p'
 alias ga='git add .'
 alias gm='git commit -m '
 alias gs='git status'
