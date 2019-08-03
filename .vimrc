@@ -66,8 +66,12 @@ vnoremap j gj
 vnoremap k gk
 nnoremap <C-j> 5gj
 nnoremap <C-k> 5gk
+nnoremap <C-h> 10h
+nnoremap <C-l> 10l
 vnoremap <C-j> 5gj
 vnoremap <C-k> 5gk
+vnoremap <C-h> 10h
+vnoremap <C-l> 10l
 "noremap! <C-?> <C-h>
 
 inoremap jj <Esc>
