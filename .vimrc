@@ -80,8 +80,6 @@ vnoremap <C-j> 5gj
 vnoremap <C-k> 5gk
 vnoremap <C-h> 10h
 vnoremap <C-l> 10l
-nnoremap <C-K> <C-u>
-nnoremap <C-J> <C-d>
 "noremap! <C-?> <C-h>
 
 inoremap jj <Esc>
