@@ -216,7 +216,9 @@ let g:airline_theme = 'luna'
 
 " ColorScheme Setting
 syntax on
-colorscheme tender
+if !has('vim_starting')
+	colorscheme tender
+endif;
 
 " MyCustom ColorScheme
 " hi Comment ctermfg=blue
