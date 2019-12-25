@@ -216,9 +216,9 @@ let g:airline_theme = 'luna'
 
 " ColorScheme Setting
 syntax on
-if !has('vim_starting')
+if isdirectory(expand('~/.vim/bundle/Vundle.vim'))
 	colorscheme tender
-endif;
+endif
 
 " MyCustom ColorScheme
 " hi Comment ctermfg=blue
