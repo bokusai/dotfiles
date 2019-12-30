@@ -127,11 +127,6 @@ command MyLineBackSameSearch call search('^\s*'. @m, 'b')
 nnoremap <Space>; :MyLineSameSearch<CR>
 nnoremap <Space>, :MyLineBackSameSearch<CR>
 
-" ColorScheme Setting
-if isdirectory(expand('~/.vim/bundle/Vundle.vim'))
-	colorscheme tender
-endif
-
 " Vundle Basic Setting
 if has('vim_starting')
 	set nocompatible
@@ -219,7 +214,9 @@ nmap <Space>w <Plug>(easymotion-overwin-w)
 " vim-airline
 let g:airline_theme = 'luna'
 
+" ColorScheme Setting
 syntax on
+colorscheme tender
 
 " MyCustom ColorScheme
 " hi Comment ctermfg=blue
