@@ -30,3 +30,5 @@ alias gaddw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace
 alias ggraph='git log --oneline --graph --all'
 
 alias hello='sh hello.sh'
+export PATH=$PATH:$HOME/local/bin
+alias vi='vim'
