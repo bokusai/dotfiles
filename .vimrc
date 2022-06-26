@@ -23,6 +23,8 @@ set fileformats=unix,dos,mac
 set fenc=utf-8
 scriptencoding utf-8
 
+set binary noeol
+
 set nobackup
 set noswapfile
 set autoread
@@ -82,7 +84,7 @@ vnoremap <C-h> 10h
 vnoremap <C-l> 10l
 "noremap! <C-?> <C-h>
 
-inoremap jj <Esc>
+inoremap jj <Esc>:w<CR>
 
 " window control
 nnoremap s <Nop>
@@ -115,6 +117,9 @@ nnoremap th gT
 inoremap {<Enter> {<Enter>}<Esc>O
 inoremap (<Enter> (<Enter>)<Esc>O
 inoremap [<Enter> [<Enter>]<Esc>O
+
+" command
+map ; :
 
 " vertical 'f'
 command -nargs=1 MyLineSearch let @m=<q-args> | call search('^\s*'. @m)
@@ -168,6 +173,10 @@ Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'	" sublimemonokai
 Plugin 'https://github.com/jacoborus/tender.vim'				" tender
 Plugin 'https://github.com/jdkanani/vim-material-theme'			" material-theme
 
+" PHP
+" Plugin 'https://github.com/phpactor/phpactor'			" material-theme
+
+
 call vundle#end()
 filetype plugin indent on
 
@@ -179,6 +188,7 @@ filetype plugin indent on
 nnoremap <Space>e :NERDTreeToggle<CR>
 " autocmd vimenter * NERDTree
 let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeWinSize = 24
 
 " NERDTree Tabs
 " map <C-n> <plug>NERDTreeTabsToggle<CR>
@@ -222,3 +232,7 @@ colorscheme tender
 " hi Comment ctermfg=blue
 " set background=dark
 hi LineNr ctermfg=darkgreen guifg=Grey guibg=Grey90
+
+" phpactor
+" autocmd FileType php setlocal omnifunc=phpactor#Complete
+
