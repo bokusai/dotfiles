@@ -32,3 +32,5 @@ alias ggraph='git log --oneline --graph --all'
 alias hello='sh hello.sh'
 export PATH=$PATH:$HOME/local/bin
 alias vi='vim'
+
+eval $(ssh-agent)
